@@ -82,7 +82,12 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
 .ptag{display:inline-block;background:#6660B4;color:#fff;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px}
 .pname{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
 .pprice{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:#FFBEF5;line-height:1;margin-bottom:4px}
+.pprice-unit{font-size:20px;font-weight:800;color:#fff}
 .pperiod{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:22px}
+.setup-box{display:flex;align-items:center;justify-content:space-between;background:rgba(255,190,245,0.12);border:1px solid rgba(255,190,245,0.4);border-radius:14px;padding:16px 20px;margin-bottom:22px}
+.setup-label{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1px}
+.setup-label span{display:block;font-family:'Quicksand',sans-serif;font-size:11px;font-weight:500;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.5);margin-top:2px}
+.setup-value{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800;color:#FFBEF5}
 .pitems{list-style:none;margin-bottom:20px}
 .pitems li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:10px}
 .pitems li::before{content:'✓';color:#6660B4;font-weight:700;flex-shrink:0}
@@ -268,7 +273,6 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
         <div class="rc-rows">
           <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 15.000</span></div>
           <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 180.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Investimento 12 meses</span><span class="rc-rv">R$ 54.000</span></div>
           <div class="rc-row"><span class="rc-rl">Ganho líquido</span><span class="rc-rv">R$ 126.000</span></div>
           <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~108 dias</span></div>
         </div>
@@ -281,7 +285,6 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
         <div class="rc-rows">
           <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 24.000</span></div>
           <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 288.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Investimento 12 meses</span><span class="rc-rv">R$ 54.000</span></div>
           <div class="rc-row"><span class="rc-rl">Ganho líquido</span><span class="rc-rv">R$ 234.000</span></div>
           <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~68 dias</span></div>
         </div>
@@ -294,13 +297,12 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
         <div class="rc-rows">
           <div class="rc-row"><span class="rc-rl">Economia/mês</span><span class="rc-rv">R$ 36.000</span></div>
           <div class="rc-row"><span class="rc-rl">Economia/ano</span><span class="rc-rv">R$ 432.000</span></div>
-          <div class="rc-row"><span class="rc-rl">Investimento 12 meses</span><span class="rc-rv">R$ 54.000</span></div>
           <div class="rc-row"><span class="rc-rl">Ganho líquido</span><span class="rc-rv">R$ 378.000</span></div>
           <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">~45 dias</span></div>
         </div>
       </div>
     </div>
-    <p class="roi-note">* Retorno previsível, não garantido. Saving aplicado sobre o volume de compras recorrentes de R$ 300 mil/mês. Investimento 12 meses = R$ 4.000 × 12 meses + R$ 6.000 de implantação = R$ 54.000. Ganhos de produtividade e governança não contabilizados.</p>
+    <p class="roi-note">* Retorno previsível, não garantido. Saving aplicado sobre o volume de compras recorrentes de R$ 300 mil/mês, considerando a mensalidade de R$ 4.000 e a implantação de R$ 6.000. Ganhos de produtividade e governança não contabilizados.</p>
   </div>
 </section>
 
@@ -344,8 +346,12 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
     <div class="pc anual">
       <div class="ptag">Plano Anual</div>
       <div class="pname">Soter Engenharia · 2 Assistentes de IA</div>
-      <div class="pprice">R$ 4.000</div>
-      <div class="pperiod">por mês · R$ 48.000/ano</div>
+      <div class="pprice">R$ 4.000<span class="pprice-unit">/mês</span></div>
+      <div class="pperiod">cobrança recorrente mensal</div>
+      <div class="setup-box">
+        <div class="setup-label">Implantação<span>pagamento único, na assinatura</span></div>
+        <div class="setup-value">R$ 6.000</div>
+      </div>
       <ul class="pitems">
         <li>2 Assistentes de IA dgenny® (Carol e Anderson)</li>
         <li>12.000 conversas iniciadas incluídas no pacote anual</li>
@@ -357,7 +363,6 @@ h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
         <li>Relatórios exportáveis em Excel e PDF</li>
         <li>Suporte dedicado contínuo</li>
       </ul>
-      <div class="ptotal">Total 12 meses (com implantação): <strong>R$ 54.000</strong></div>
       <div class="validity-box">Proposta válida por <strong>7 dias</strong> a partir da data de envio.</div>
     </div>
   </div>
